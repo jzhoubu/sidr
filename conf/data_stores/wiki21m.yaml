@@ -1,0 +1,55 @@
+nq_train:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: data/train/nq-train.jsonl
+  download_link: https://huggingface.co/datasets/vsearch/nq/resolve/main/train.jsonl.gz
+
+trivia_train:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: data/train/trivia-train.jsonl
+  download_link: https://huggingface.co/datasets/vsearch/tqa/resolve/main/train.jsonl.gz
+
+webq_train:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: data/train/webq-train.jsonl
+  download_link: https://huggingface.co/datasets/vsearch/webq/resolve/main/train.jsonl.gz
+
+msmarco_train:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: data/train/msmarco-train.jsonl
+  download_link: https://huggingface.co/datasets/vsearch/msmarco/resolve/main/train.jsonl.gz
+
+
+20241016_trivia_trainsearch:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/health_train/llama3-paragraph-prompt/20241013-v2-health-trainsearch-rag_score.jsonl
+  shuffle_positives: True
+
+20241016_trivia_trainsearch_filter:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/health_train/llama3-paragraph-prompt/20241013-v2-health-trainsearch-rag_score-filter.jsonl
+  shuffle_positives: True
+
+20241007_v2_health_trainsearch_llama3_prompt_paragraph_filter:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/health_train/llama3-paragraph-prompt/20241007-v2-health-trainsearch-rag_score-filter.jsonl
+  shuffle_positives: True
+
+20241007_v2_health_trainsearch_llama3_prompt_paragraph_filter_single_threshold:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/health_train/llama3-paragraph-prompt/20241007-v2-health-trainsearch-rag_score-filter-single-threshold.jsonl
+  shuffle_positives: True
+
+20241007_v2_health_trainsearch_llama3_prompt_paragraph_filter_threshold_050:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/health_train/llama3-paragraph-prompt/20241007-v2-health-trainsearch-rag_score-filter-threshold-050.jsonl
+  shuffle_positives: True
+
+20241101_rag_nq_train:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/nq_train/20241101-ir-nq-trainsearch.jsonl
+  shuffle_positives: True
+
+20241101_rag_nq_train_score_filter:
+  _target_: src.ir.data.biencoder_dataset.BiEncoderDataset
+  file: /export/data/jzhoubu/workspace/vsearch/data/preprocess/nq_train/20241101-ir-nq-trainsearch-score_filter.jsonl
+  shuffle_positives: True
